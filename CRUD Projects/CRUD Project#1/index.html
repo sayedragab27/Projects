@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/media.css">
+</head>
+
+<body>
+
+    <section class="bg-white">
+        <h2 class="text-center text-muted">Product System Managemnt</h2>
+        <div class="container">
+            <div class="w-75 mx-auto mt-5">
+                <div class="form-floating mb-3">
+                    <input type="text" oninput="validateProduct(this)" class="form-control" id="productName"
+                        placeholder="Enter Product Name">
+                    <span class="text-danger d-none">Product name must start with capital and min 3 to 15
+                        characters</span>
+
+                    <label for="productName">Product Name</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" oninput="validateProduct(this)" class="form-control" id="productPrice"
+                        placeholder="Enter Product Price">
+                    <span class="text-danger d-none">Product price must be between 6000 to 60000</span>
+                    <label for="productPrice">Product Price</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="text" oninput="validateProduct(this)" list="categoryList" class="form-control"
+                        id="ProductCategory" placeholder="Enter Product Category">
+                    <span class="text-danger d-none">Product category must be Phones, Screens, Watches or Airpods</span>
+                    <label for="ProductCategory">Product Category</label>
+                    <datalist id="categoryList">
+                        <option value="Phones"></option>
+                        <option value="Screens"></option>
+                        <option value="Watches"></option>
+                        <option value="Airpods"></option>
+                    </datalist>
+                </div>
+                <div class="form-floating mb-3">
+                    <input type="file" onchange="validateProduct(this)" class="form-control" id="ProductImage"
+                        placeholder="Select Product Image">
+                    <span class="text-danger d-none">Product image must be png or jpg</span>
+                    <label for="productPrice">Product Image</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <textarea name="" oninput="validateProduct(this)" class="form-control w-100" rows="10"
+                        id="ProductDescription"></textarea>
+                    <span class="text-danger d-none">Product description must be betweem min 4 to 255 characters</span>
+                    <label for="productPrice">Product Description</label>
+                </div>
+                <button disabled class="btn btn-info w-100" id="addBtn" onclick="addProduct()">Add Product</button>
+                <button class="btn btn-outline-info w-100 d-none" id="updateBtn" onclick="updateProduct()"
+                    indx="">Update Product</button>
+            </div>`
+        </div>
+    </section>
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="form-floating mb-3">
+                <input oninput="searchProduct(this)" type="text" class="form-control" id="productSearch"
+                    placeholder="Search By">
+                <label for="productSearch">Search By Name</label>
+            </div>
+            <div class="w-75 mx-auto text-center">
+                <span class="text-danger d-none" id="notFound"></span>
+            </div>
+            <div class="row gy-4" id="products">
+
+            </div>
+        </div>
+
+    </section>
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/sweetalert2.all.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
