@@ -44,15 +44,16 @@
                     </datalist>
                 </div>
                 <div class="form-floating mb-3">
-                    <input type="file" onchange="validateProduct(this)" class="form-control" id="ProductImage"
+                    <input type="file" onchange="imgValidation(this)" class="form-control" id="ProductImage"
                         placeholder="Select Product Image">
-                    <span class="text-danger d-none">Product image must be png or jpg</span>
+                    <span class="text-danger d-none" id="imgError">Product image must be one of ( jpg, jpeg, png, jfif,
+                        webp )"</span>
                     <label for="productPrice">Product Image</label>
                 </div>
                 <div class="form-floating mb-3">
                     <textarea name="" oninput="validateProduct(this)" class="form-control w-100" rows="10"
                         id="ProductDescription"></textarea>
-                    <span class="text-danger d-none">Product description must be betweem min 4 to 255 characters</span>
+                    <span class="text-danger d-none">Product description must be betweem 0 to 255 characters</span>
                     <label for="productPrice">Product Description</label>
                 </div>
                 <button disabled class="btn btn-info w-100" id="addBtn" onclick="addProduct()">Add Product</button>
