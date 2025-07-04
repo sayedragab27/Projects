@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/media.css">
+</head>
+
+<body>
+
+    <section class="nav-color py-4">
+        <div class="">
+            <nav class="">
+                <nav class="navbar navbar-expand-lg ">
+                    <div class="container">
+                        <a class="navbar-brand d-flex justify-content-between align-items-center gap-2" href="#">
+                            <img src="./images/logo@2x.png" style="width: 64px; height: 38px;"
+                                class="object-fit-contain d-inline-block" alt="Weather">
+                            <div>
+                                <h1 class="m-0 p-0">Weather</h1>
+                                <small class="m-0 p-0">tagline goes here</small>
+                            </div>
+
+                        </a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse " id="navbarNav">
+                            <ul class="navbar-nav ms-auto gap-4 align-items-center">
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link" href="#">News</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Live Cameras</a>
+
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Photos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Contact</a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </nav>
+
+        </div>
+
+    </section>
+    <section class="bg-image hero">
+        <div class="container">
+            <div class="">
+                <div id="#search" class="d-flex align-items-center position-relative w-100 mx-auto m-5">
+                    <input class="w-100 p-3 nav-color rounded-pill text-white border-black" id="search-input"
+                        type="text" placeholder="Find your Location ..." id="search-input">
+                    <button class="btn btn-info position-absolute px-4 py-2 end-0 me-3 rounded-pill" type="submit"
+                        id="search-btn">Find</button>
+                </div>
+            </div>
+            <div>
+
+            </div>
+        </div>
+    </section>
+    <section class="forecast-table nav-color py-4 position-relative">
+        <div class="container translate-middle-y">
+            <div class="row border overflow-hidden p-0 rounded-4" id="WeatherCards">
+             
+
+            </div>
+        </div>
+    </section>
+
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
